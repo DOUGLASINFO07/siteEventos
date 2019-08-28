@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html
+    xmlns:th="http://thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <title>DIMTECH</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="materialize.css/materialize.min.css"  media="screen,projection"/>
+    </head>
+
+    <body>
+
+        <nav>
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo"><span style="font-size: 110%; font-weight:bold">EVENTOS - Cadastro de Eventos</span></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                      <a href="/eventos" class="waves-effect waves-light btn">
+                            <i class="material-icons left">home</i>Home</a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <form class="container" method="post">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input value="" id="Nome" type="text" class="validate" name="nome"/>
+                    <label class="active" for="Nome">Nome</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input value="" id="Local" type="text" class="validate" name="local"/>
+                    <label class="active" for="Local">Local</label>
+                </div>
+                <div class="input-field col s3">
+                    <input value="" id="Data" type="date" class="validate" name="data"/>
+                    <label class="active" for="Data">Data</label>
+                </div>
+                <div class="input-field col s3">
+                    <input value="" id="Horario" type="time" class="validate" name="horario"/>
+                    <label class="active" for="Horario">Horário</label>
+                </div>
+            </div>
+            <div>
+                <button href="/eventos" class="waves-effect waves-light btn" type="submit" name="action" >Salvar
+                    <i class="material-icons left">cloud</i>
+                </button>
+            </div>
+            <div>
+                <h3>
+                    <a href="/eventos" class="waves-effect waves-light btn">
+                        <i class="material-icons left">cloud</i>Voltar</a>
+                </h3> 
+            </div>
+        </form>
+        <br>
+        <br>
+
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">DIMTECH - Gerenciamento de Eventos</h5>
+                        <p class="grey-text text-lighten-4">Site desenvolvido para quem pretende publicar e divulgar Evento, assim como, controlar cadastro de convidados e ou participantes.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links</h5>
+                        <ul>
+                            <li><a href="http://WWW.dimtech.com.br">DouglasInfo07</a></li>
+                            <li><a href="http://WWW.dimtech.com.br">SistemaCZ</a></li>
+                            <li><a href="http://WWW.dimtech.com.br">Controle de Finanças</a></li>
+                            <li><a href="http://WWW.dimtech.com.br">LogExpress</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2014 Copyright DouglasInfo07
+                    <a class="grey-text text-lighten-4 right" href="http://WWW.dimtech.com.br">Mais Links</a>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

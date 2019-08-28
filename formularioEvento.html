@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html
+    xmlns:th="http://thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <title>DIMTECH</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="materialize.css/materialize.min.css"  media="screen,projection"/>
+    </head>
+
+    <body>
+        <div class="card-panel teal lighten-2"> <h1>Cadastro de Eventos</h1></div>
+        <form class="container" method="post">
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <input value="" id="Nome" type="text" class="validate" name="nome"/>
+                    <label class="active" for="Nome">Nome</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <input value="" id="Local" type="text" class="validate" name="local"/>
+                    <label class="active" for="Local">Local</label>
+                </div>
+                <div class="input-field col s3">
+                    <input value="" id="Data" type="date" class="validate" name="data"/>
+                    <label class="active" for="Data">Data</label>
+                </div>
+                <div class="input-field col s3">
+                    <input value="" id="Horario" type="time" class="validate" name="horario"/>
+                    <label class="active" for="Horario">Horário</label>
+                </div>
+            </div>
+
+            <div align="Center">
+                <button href="/eventos" class="waves-effect waves-light btn" type="submit" name="action" >Salvar
+                    <i class="material-icons left">cloud</i>
+                </button>
+            </div>
+
+            <div align="Right">
+                <h3>
+                    <a href="/eventos" class="waves-effect waves-light btn">
+                        <i class="material-icons left">cloud</i>Voltar</a>
+                </h3> 
+            </div>
+        </form>
+
+    </body>
+</html>

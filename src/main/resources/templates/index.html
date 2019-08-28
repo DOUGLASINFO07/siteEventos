@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="materialize.css/materialize.min.css"  media="screen,projection"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <nav>
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo"><span style="font-size: 110%; font-weight:bold">EVENTOS - Gerenciamento de Eventos</span></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <a href="/cadastrarEvento" class="waves-effect waves-light btn">
+                            <i class="material-icons left">cloud</i>Cadastro de Eventos</a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <br>
+        <div class="container">
+            <p align="center" class="card-panel teal lighten-2"> <span style="font-size: 170%; font-weight:bold; color: white"> Lista de Eventos Cadastrados </span></p>
+        </div>
+
+        <div class="container">
+            <p align="center" class="panel alert light-blue"> <span style="font-size: 110%; font-weight:bold; color: white"> Click no nome do evento para editar! </span></p>
+        </div>
+
+        <table class="container">
+            <thead>
+                <tr class="card-panel teal lighten-2">
+                    <th><span style="color: white">Nome do Evento</span></th>
+                    <th><span style="color: white">Local</span></th>
+                    <th><span style="color: white">Data</span></th>
+                    <th><span style="color: white">Horário</span></th>
+                    <th><span style="color: white">deletar</span></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr th:each="eventos : ${eventos}">
+                    <td><a th:href="${#mvc.url('EC#detalhesEventoGet').arg(0, eventos.codigo).build()}"><span th:text="${eventos.nome}"></span></a></td>
+                    <td><span th:text="${eventos.local}"></span></td>
+                    <td><span th:text="${eventos.data}"></span></td>
+                    <td><span th:text="${eventos.horario}"></span></td>
+                    <td><a th:href="${#mvc.url('EC#deletarEvento').arg(0, eventos.codigo).build()}"><i class="material-icons center">delete</i></a></td>
+                <tr>
+            </tbody>
+        </table>
+
+        <br>
+        <br>
+
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">DIMTECH - Gerenciamento de Eventos</h5>
+                        <p class="grey-text text-lighten-4">Site desenvolvido para quem pretende publicar e divulgar Evento, assim como, controlar cadastro de convidados e ou participantes.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links</h5>
+                        <ul>
+                            <li><a href="http://WWW.dimtech.com.br">DouglasInfo07</a></li>
+                            <li><a href="http://WWW.dimtech.com.br">SistemaCZ</a></li>
+                            <li><a href="http://WWW.dimtech.com.br">Controle de Finanças</a></li>
+                            <li><a href="http://WWW.dimtech.com.br">LogExpress</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2014 Copyright DouglasInfo07
+                    <a class="grey-text text-lighten-4 right" href="http://WWW.dimtech.com.br">Mais Links</a>
+                </div>
+            </div>
+        </footer>
+
+        <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="materialize.js/materialize.min.js"></script>
+    </body>
+</html>

@@ -6,6 +6,7 @@
 package com.dimtechApp.dimtechApp;
 
 
+
 import java.net.URI;
 import java.net.URISyntaxException;
 import org.apache.commons.dbcp2.BasicDataSource;
@@ -107,4 +108,5 @@ public class DataConfiguration {
 //		adapter.setPrepareConnection(true);
 //		return adapter;
 //	}
+
 }

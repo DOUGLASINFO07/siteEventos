@@ -5,14 +5,15 @@
  */
 package com.dimtechApp.dimtechApp;
 
-
-
 import java.net.URI;
 import java.net.URISyntaxException;
 import org.apache.commons.dbcp2.BasicDataSource;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+
+
+
 /**
  *
  * @author douglas borges egidio
@@ -22,13 +23,13 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class DataConfiguration {
     
-     @Bean
+      @Bean
     public BasicDataSource dataSource() throws URISyntaxException {
         URI dbUri = new URI(System.getenv("DATABASE_URL"));
 
         String username = dbUri.getUserInfo().split(":")[0];
         String password = dbUri.getUserInfo().split(":")[1];
-        String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath() + "?sslmode=require";
+        String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
 
         BasicDataSource basicDataSource = new BasicDataSource();
         basicDataSource.setUrl(dbUrl);
@@ -56,7 +57,7 @@ public class DataConfiguration {
 //		adapter.setShowSql(true);
 //		adapter.setGenerateDdl(true);
 //                
-//                //Testar uma das três setDatabasePlatform.
+//                //Testar uma das trï¿½s setDatabasePlatform.
 //		adapter.setDatabasePlatform("org.hibernate.dialect.MySQL5Dialect");
 ////		adapter.setDatabasePlatform("org.hibernate.dialect.MySQLMyISAMDialect");
 ////		adapter.setDatabasePlatform("org.hibernate.dialect.MySQLInnoDBDialect");
@@ -100,7 +101,7 @@ public class DataConfiguration {
 //		adapter.setShowSql(true);
 //		adapter.setGenerateDdl(true);
 //                
-//                //Testar uma das três setDatabasePlatform.
+//                //Testar uma das trï¿½s setDatabasePlatform.
 //		adapter.setDatabasePlatform("org.hibernate.dialect.MySQL5Dialect");
 ////		adapter.setDatabasePlatform("org.hibernate.dialect.MySQLMyISAMDialect");
 ////		adapter.setDatabasePlatform("org.hibernate.dialect.MySQLInnoDBDialect");
